@@ -9,9 +9,18 @@ Node::Node(Student* newstudent){
   next = NULL;
 }
 
+Node::Node() {
+  student = NULL;
+  next = NULL;
+}
+
 Node::~Node(){
   delete &student;
   next = NULL;
+}
+
+void Node::setStudent(Student* newstudent) {
+  student = newstudent;
 }
 
 Student* Node::getStudent(){
@@ -22,6 +31,6 @@ void Node::setNext(Node* newnext){
   next = newnext;
 }
 
-Node* Node::getNext();{
+Node* Node::getNext() {
   return next;
 }

@@ -41,7 +41,7 @@ void createStudent(){
   newstudent->setLastName(last);
   newstudent->setID(id);
   newstudent->setGPA(gpa);
-  addStudent(newstudent);
+  addStudent(newstudent, head);
   
 }
 
@@ -49,7 +49,7 @@ void addStudent(Student* newstudent, Node* next){
   
   if (next->getNext() == NULL){
     next->setNext(new Node());
-    next->getNext->setStudent(newstudent);
+    next->getNext()->setStudent(newstudent);
   }
   else if(next->getNext() != NULL){
     addStudent(newstudent, next->getNext());
